@@ -1,0 +1,471 @@
+@charset "utf-8";
+
+
+@media screen and (max-width: 800px) {
+	.nav-main {display: none}
+
+}
+
+
+body {
+
+	background-color: white;
+	font-family: 'Cabin', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+/** Header **/
+
+.header-container {
+
+	background-image: url(tsi-background2.png);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	height: 150px;
+
+}
+
+.nav-container {
+
+	width: 100%;
+	height: 60px;
+	top: 0%;
+	left: 0%;
+	padding-top: 5px;
+	position: fixed;
+
+}
+
+.nav-main {
+
+	max-width: 1100px;
+	height: 100%;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0px 20px 0px 20px;
+
+}
+
+#nav-background-scroll {
+
+	display: none;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 70px;
+	z-index: -1;
+	overflow-y: hidden;
+
+	background-image: url(tsi-background2.png);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+
+}
+
+.logo {
+
+	margin-top: 10px;
+	width: 50px;
+	height: 100%;
+	display: flex;
+
+}
+
+.nav-items-left {
+
+	list-style: none;
+	display: flex;
+	flex: 1;
+	min-width: 500px;
+
+}
+
+.nav-item {
+
+	display: inline-block;
+	position: relative;
+	margin-left: 10px;
+	margin-top: -4px;
+
+}
+
+.nav-link {
+
+	color: white;
+	opacity: 1;
+	text-decoration: none;
+	padding: 15px 10px;
+	font-weight: bolder;
+	font-size: 20px;
+	transition: opacity 200ms;
+	cursor: pointer;
+
+}
+
+.nav-link:hover {
+
+	opacity: 0.8;
+
+}
+
+.nav-link-unselect {
+
+	color: white;
+	opacity: .8;
+	text-decoration: none;
+	padding: 15px 10px;
+	font-weight: bolder;
+	font-size: 20px;
+	cursor: help;
+}
+
+.nav-items-right {
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.nav-right-image {
+
+	height: 40px;
+	width: 40px;
+	margin-left: 10px;
+	transition: opacity 200ms;
+
+}
+
+.nav-right-image:hover {
+	opacity: .8;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+		font-size: 13px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/** Footer **/
+
+.footer-container {
+
+	height: 20px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#footer-text {
+	font-size: 20px;
+	color: black;
+	align-content: center;
+}
+
+/** Main **/
+
+
+/** Intro **/
+
+.main-container {
+
+	max-width: 1100px;
+	margin: 0 auto;
+	margin-top: -10px;
+	align-content: center;
+
+}
+
+.intro {
+
+	text-align: center;
+
+}
+
+.intro h1 {
+
+	font-size: 50px;
+	letter-spacing: 3px;
+	color: #3596d3;
+
+}
+
+#patch {
+
+	margin-top: -30px;
+	font-size: 20px;
+	color: black;
+	font-weight: 400;
+
+}
+
+hr.intro-line {
+
+	margin-top: 25px;
+	height: 3px;
+	background-color: #3596d3;
+	border: none;
+	width: 80%;
+}
+
+/** Tier Lists **/
+
+
+.tier-lists-container {
+
+	width: 100%;
+	text-align: center;
+
+}
+
+.tier-lists {
+
+	display: inline-block;
+	color: black;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0px 25px 30px;
+
+}
+
+.tier {
+
+	text-align: center;
+	margin-bottom: -10px;
+
+}
+
+.tier hr {
+
+	width: 200px;
+	height: 2px;
+	background-color: black;
+	border: none;
+	margin-top: -10px;
+
+}
+
+.tier h1 {
+
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.tier p {
+
+	color: #3596d3;
+	font-size: 20px;
+	align-content: center;
+
+}
+
+.tier-lists img {
+
+	max-width: 80px;
+	height: auto;
+}
+
+/*
+.tier-lists img:hover {
+
+	filter: brightness(0.8);
+	-webkit-filter: brightness(0.8);
+	cursor: pointer;
+}
+*/
+
+
+/** Builds Drop Down **/
+
+.overlay {
+    height: 0%;
+    width: 80%;
+	min-width: 800px;
+	margin-left: 10%;
+	margin-top: 70px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.4s;
+	text-decoration: none;
+
+}
+
+.overlay-content {
+    position: relative;
+    width: 88%;
+	min-width: 700px;
+	margin-left: 6.15%;
+	margin-top: 5%;
+	height: 100%;
+	text-align: center;
+	overflow-y: hiden;
+}
+
+
+.overlay a:hover, .overlay a:focus {
+    opacity: 0.8;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 35px;
+    font-size: 60px;
+	z-index: 100;
+	color: white;
+	text-decoration: none;
+}
+
+
+.build-image {
+	width: inherit;
+}
+
+
+/** Lookback **/
+
+.searchbox-container {
+	text-align: center;
+	display: inline-flex;
+	margin-top: 40px;
+	height: 40px;
+}
+
+.search-wrapper{
+	display: inline-block;
+	width: 250px;
+	margin-right: 10px;
+	border: 2px solid #3596d3;
+	border-radius: 5px;
+}
+
+.searchTerm {
+	text-align: center;
+	width: 100%;
+	background: none;
+	border: 0px;
+	padding: 3px;
+	height: 30px;
+	outline: none;
+	color: #3596d3;
+	font-family: 'Cabin';
+	font-weight: lighter;
+	font-size: 20px;
+}
+
+#search-2 {
+	margin-left: 12px;
+}
+
+#search-button {
+	transition: opacity 200ms;
+}
+
+#search-button:hover{
+	opacity: .8;
+}
+
+.searchTerm:focus{
+	color: #3596d3;
+	font-weight: normal;
+}
+
+.searchButton {
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	background-color: white;
+	color: #3596d3;
+	border-radius: 0px;
+	cursor: pointer;
+	font-size: 10px;
+	padding-bottom: 5px;
+	border: none;
+	border-radius: 5px;
+	background: none;
+}
+
+
+/* Builds */
+
+.overlay {
+	height: 0%;
+	width: 80%;
+	min-width: 800px;
+	margin-left: 10%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	background-color: rgba(0,0,0, 0.8);
+	overflow-y: hidden;
+	transition: 0.4s;
+}
+
+.overlay-content {
+	position: relative;
+	width: 88%;
+	min-width: 700px;
+	margin-left: 6.15%;
+	margin-top: 3%;
+	height: 100%;
+	text-align: center;
+	overflow-y: hidden;
+}
+
+
+.overlay a:hover, .overlay a:focus {
+  color: dodgerblue;
+}
+
+.overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+	z-index: 100;
+}
+
+
+.build-image {
+	width: inherit;
+}
